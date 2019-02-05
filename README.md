@@ -27,6 +27,12 @@ To specify a single sheet within the spreadsheet, add it to the filename with a 
 mklang Spreadsheet.xlsx#Sheet1 export-path/
 ```
 
+To include a map.json, add --include-map:
+```
+mklang Spreadsheet.xlsx#Sheet1 export-path/ --include-map
+```
+_**Warning:**_ if there are any missing translations in a language pack, it will not be included in the enabled array of the map.json.
+
 Multiple sheets and destination paths are also supported. Separate sheet names with a comma, and destinations with a space:
 ```
 mklang Spreadsheet.xlsx#Sheet1,Sheet2 export-path/sub-1/ export-path/sub-2/
